@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/aos/aos.css">
+    <link rel="stylesheet" href="libs/mmenu/mmenu.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+    <div id="app">
+        <myheader></myheader>
+
+        <main class="main-content">
+            
+            <!-- visa list page-->
+
+            <div class="cate-page cate-visa-page">
+                <!-- bnaner cate-->
+                <a href="javascript:void(0);" class="banner-cate">
+                    <img src="images/banner-cate.png" alt="" class="img-fluid">
+                </a>
+
+                <div class="picked-location">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                <div class="picked-location-left picked-location-item">
+                                    <h3 class="title">
+                                        Chọn địa điểm
+                                    </h3>
+                                    <ul class="list-unstyled pl-0 m-0">
+                                        <li class="nation active">
+                                            <a href="javascript:void(0);" class="js-change-nation" data-holder="#nations-list-1">
+                                                Châu Á
+                                            </a>
+                                        </li>
+                                        <li class="nation">
+                                            <a href="javascript:void(0);" class="js-change-nation" data-holder="#nations-list-2">
+                                                Châu Âu
+                                            </a>
+                                        </li>
+                                        <li class="nation">
+                                            <a href="javascript:void(0);" class="js-change-nation" data-holder="#nations-list-3">
+                                                Châu Mỹ
+                                            </a>
+                                        </li>
+                                        <li class="nation">
+                                            <a href="javascript:void(0);" class="js-change-nation" data-holder="#nations-list-4">
+                                                Châu Úc
+                                            </a>
+                                        </li>
+                                        <li class="nation">
+                                            <a href="javascript:void(0);" class="js-change-nation" data-holder="#nations-list-5">
+                                                Châu Phi
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-12">
+                                <div class="picked-location-right picked-location-item">
+                                    <h3 class="title">
+                                        Các quốc gia
+                                    </h3>
+    
+                                    <div class="tab-nations" >
+
+                                        <div id="nations-list-1" class="tab-content active">
+                                            <div class="nations-list-wrap">
+                                                <div class="nations-item" v-for="items in 40">
+                                                    <input type="radio"  :id="'nation_' + items " name="visa_nation" :value="items"> 
+                                                    <label :for="'nation_' + items ">
+                                                        <span></span> 
+                                                        Quốc gia châu Á {{ items }}
+                                                   </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nations-list-2" class="tab-content">
+                                            <div class="nations-list-wrap">
+                                                <div class="nations-item" v-for="items in 20">
+                                                    <input type="radio"  :id="'nation_' + items " name="visa_nation" :value="items"> 
+                                                    <label :for="'nation_' + items ">
+                                                        <span></span> 
+                                                        Quốc gia Châu Âu {{ items }}
+                                                   </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nations-list-3" class="tab-content">
+                                            <div class="nations-list-wrap">
+                                                <div class="nations-item" v-for="items in 15">
+                                                    <input type="radio"  :id="'nation_' + items " name="visa_nation" :value="items"> 
+                                                    <label :for="'nation_' + items ">
+                                                        <span></span> 
+                                                        Quốc gia Châu Mỹ {{ items }}
+                                                   </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nations-list-4" class="tab-content">
+                                            <div class="nations-list-wrap">
+                                                <div class="nations-item" v-for="items in 16">
+                                                    <input type="radio"  :id="'nation_' + items " name="visa_nation" :value="items"> 
+                                                    <label :for="'nation_' + items ">
+                                                        <span></span> 
+                                                        Quốc gia Châu Úc {{ items }}
+                                                   </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nations-list-5" class="tab-content">
+                                            <div class="nations-list-wrap">
+                                                <div class="nations-item" v-for="items in 32">
+                                                    <input type="radio"  :id="'nation_' + items " name="visa_nation" :value="items"> 
+                                                    <label :for="'nation_' + items ">
+                                                        <span></span> 
+                                                        Quốc gia Châu Phi {{ items }}
+                                                   </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nations-actions">
+                                            <a href="javascript:void(0);" class="js-submit-nation btn-nation">
+                                                Tiếp theo 
+                                                <span class="icon">
+                                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.15792 0.0772514C1.04632 0.0772514 0.920758 0.133057 0.837053 0.216761L0.139508 0.914307C0.0558026 0.998011 -5.79125e-07 1.12357 -5.74105e-07 1.23518C-5.69086e-07 1.34678 0.0558026 1.47234 0.139508 1.55605L5.62221 7.03875L0.139508 12.5214C0.0558031 12.6052 -5.70968e-08 12.7307 -5.20773e-08 12.8423C-4.64304e-08 12.9679 0.0558032 13.0795 0.139508 13.1632L0.837053 13.8607C0.920758 13.9444 1.04632 14.0002 1.15792 14.0002C1.26953 14.0002 1.39509 13.9444 1.47879 13.8607L7.97991 7.35962C8.06362 7.27591 8.11942 7.15035 8.11942 7.03875C8.11942 6.92714 8.06362 6.80158 7.97991 6.71788L1.47879 0.216761C1.39509 0.133057 1.26953 0.0772514 1.15792 0.0772514Z" fill="#848383"/>
+                                                        <path d="M9.15792 0.0772514C9.04632 0.0772514 8.92076 0.133057 8.83705 0.216761L8.13951 0.914307C8.0558 0.998011 8 1.12357 8 1.23518C8 1.34678 8.0558 1.47234 8.13951 1.55605L13.6222 7.03875L8.13951 12.5214C8.0558 12.6052 8 12.7307 8 12.8423C8 12.9679 8.0558 13.0795 8.13951 13.1632L8.83705 13.8607C8.92076 13.9444 9.04632 14.0002 9.15792 14.0002C9.26953 14.0002 9.39509 13.9444 9.47879 13.8607L15.9799 7.35962C16.0636 7.27591 16.1194 7.15035 16.1194 7.03875C16.1194 6.92714 16.0636 6.80158 15.9799 6.71788L9.47879 0.216761C9.39509 0.133057 9.26953 0.0772514 9.15792 0.0772514Z" fill="#848383"/>
+                                                    </svg>                                                        
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+
+            </div>
+            
+
+        </main>
+
+        <myfooter></myfooter>
+
+
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/httpvueloader.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/mmenu/mmenu.js"></script>
+    <script src="libs/bootstrap/popper.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- flatpickr js-->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                product: [],
+                loadingProduct: '',
+                post: [],
+                loadingPost: '',
+                swiperFeatured: null,
+                swiperFeaturedOptions: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                    speed: 800,
+                    autoHeight: true,
+                    lazy: {
+                        loadPrevNext: true,
+                    }
+                },
+            },
+            components: {
+                myheader: httpVueLoader("vue_components/header.vue"),
+                breadcrumb: httpVueLoader("vue_components/breadcrumb.vue"),
+                myfooter: httpVueLoader("vue_components/footer.vue"),
+                'product-item': httpVueLoader("vue_components/productItem.vue"),
+                dichvuitem: httpVueLoader("vue_components/dichvuitem.vue")
+            },
+            methods: {
+                getDataProduct: function() {
+                    fetch(`json/product.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.product = result;
+                            this.loadingProduct = true;
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                },
+                getDataPost: function() {
+                    fetch(`json/post.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.post = result;
+                            this.loadingPost = true;
+
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                }
+            },
+            mounted() {
+
+
+                this.$nextTick(() => {
+                    $(window).bind("load", function() {
+
+                        changeTabs('.js-change-nation');
+
+                    });
+                })
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/aos/aos.css">
+    <link rel="stylesheet" href="libs/mmenu/mmenu.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+    <div id="app">
+        <myheader></myheader>
+
+        <main class="main-content">
+
+            <!-- cart page -->
+
+            <div class="cart-page-wrapper">
+               
+                <div class="cart-page-steps">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <ol class="col-12 col-lg-6 offset-lg-3 progress-steps">
+                                <li :class="{ iscomplete : currentCartStep > 1, isactive: currentCartStep == 1 }" data-step="1">
+                                    Thông tin
+                                </li>
+                                <li :class="{ iscomplete : currentCartStep > 2, isactive: currentCartStep == 2 }" data-step="2">
+                                    Thanh toán
+                                </li>
+                                <li :class="{ iscomplete : currentCartStep == 3}" data-step="3">
+                                    Hoàn thành
+                                </li>
+                            </ol>
+                        </div>
+                       
+
+                    </div>
+                </div>
+                
+                <form action="" class="cart-page-content">
+
+               
+                    
+                    <div class="container">
+
+                        <!-- step 1-->
+                        <div id="step1"  v-if=" currentCartStep == 1">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="cart-steps-content">
+                                        <h3 class="title">
+                                            Thông tin liên hệ
+                                        </h3>
+                                        <div class="row">
+                                            <div class="form-group col-12 col-md-6">
+                                                <label for="customerName">Họ và tên *</label>
+                                                <input type="text" class="form-control" id="customerName" placeholder="Nhập họ và tên đầy đủ của bạn">
+                                            </div>
+                                            <div class="form-group col-12 col-md-6">
+                                                <label for="customerTel">Số điện thoại *</label>
+                                                <input type="text" class="form-control" id="customerTel" placeholder="Nhập số điện thoại của bạn">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-12 col-md-6">
+                                                <label for="customerAddr">Địa chỉ *</label>
+                                                <input type="text" class="form-control" id="customerAddr" placeholder="Nhập số địa chỉ của bạn">
+                                            </div>
+                                            <div class="form-group col-12 col-md-6">
+                                                <label for="customerEmail">Địa chỉ Email</label>
+                                                <input type="text" class="form-control" id="customerEmail" placeholder="Nhập địa chỉ email của bạn">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="customerCity">Tỉnh/Thành phố *</label>
+                                                    <div class="position-relative custom-select2">
+                                                        <select id="customerCity" class="form-control">
+                                                            <option selected>Chọn Tỉnh/Thành phố</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="form-group mb-lg-0">
+                                                    <label for="customerDistrict">Quận/Huyện *</label>
+                                                    <div class="position-relative custom-select2">
+                                                        <select id="customerDistrict" class="form-control">
+                                                            <option selected>Chọn Quận/Huyện</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group mb-lg-0">
+                                                    <label for="customerNote">Ghi chú</label>
+                                                    <textarea class="form-control" id="customerNote" rows="4"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-page-actions">
+
+                                            <div class="row">
+                                                <div class="col-6  text-right align-self-center">
+                                                    <a href="javascript:void(0);" class="go-back text-underline d-inline-block">
+                                                        Quay lại
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 text-left">
+                                                    <a href="javascript:void(0);" class="btn-custom btn-color text-uppercase d-inline-block" @click="nextCartStep()">
+                                                        Tiếp theo
+                                                    </a>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!-- step 2-->
+                        <div id="step2"  v-if=" currentCartStep == 2">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-xl-4 order-xl-1">
+                                    <div class="cart-steps-content">
+                                        <h3 class="title">
+                                            ĐƠN HÀNG <span>(02)</span> 
+                                            <a href="javascript:void(0);" class="cart-change">
+                                                Thay đổi
+                                            </a>
+                                        </h3>
+                                        <div class="steps2-content">
+                                            <div class="cart-list-item">
+                                                <div class="cart-item" v-for="item in 2">
+                                                    <div class="cart-info">
+                                                        <p class="cart-item-cate">
+                                                            Dịch vụ làm Visa Mỹ
+                                                        </p>
+                                                        <a href="javascript:void(0);" class="cart-item-name">
+                                                            Visa Mỹ Du Lịch, Công Tác & Thăm Thân
+                                                        </a>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-6 text-left">
+                                                                <span class="">
+                                                                    Ngày  nhập cảnh:
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-6 text-right">
+                                                                <span class="date font-weight-bold">
+                                                                    05/02/2021
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <div class="cart-item-qty">
+                                                                    <span class="name">
+                                                                        Số lượng khách:
+                                                                    </span>
+                                                                    <span class="value font-weight-bold">
+                                                                        x2
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 text-right">
+                                                                <span class="cart-item-total ">
+                                                                    <b class="color-bl">12.168.000</b> VNĐ
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-summary-wrap">
+                                                 <div class="cart-summary">
+                                                <div class="cart-summary-item">
+                                                    <span class="color-bl name">
+                                                        Thành tiền :
+                                                    </span>
+                                                    <span class="color-bl value">
+                                                        15.891.000 VNĐ
+                                                    </span>
+                                                </div>
+                                                <div class="cart-summary-item">
+                                                    <span class="color-grey name">
+                                                        Phí giao hàng : 
+                                                    </span>
+                                                    <span class="color-grey value">
+                                                        0 VNĐ
+                                                    </span>
+                                                </div>
+                                                <div class="cart-summary-item">
+                                                    <span class="color-bl name">
+                                                        Tổng tiền
+                                                    </span>
+                                                    <span class="color-theme value">
+                                                        15.891.000 VNĐ
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-xl-8 ">
+                                    <div class="cart-steps-content">
+                                        <h3 class="title">
+                                            PHƯƠNG THỨC THANH TOÁN
+                                        </h3>
+
+                                        <div class="steps2-content">
+
+                                            <div class="steps2-content-wrap">
+                                                <div class="payment-methods">
+                                                    <div class="form-check">
+                                                        <input type="radio" id="pay_method_1" name="pay_method" value="1">
+    
+                                                        <label for="pay_method_1">
+                                                            <span> </span>
+                                                            <div class="pay-method-img">
+                                                                <img src="images/ic-PAY_TIENMAT.png" alt="" class="img-fluid">
+                                                            </div>
+                                                            
+                                                             Thanh toán tiền mặt khi nhận hàng
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="radio" id="pay_method_2" name="pay_method" value="2">
+    
+                                                        <label for="pay_method_2">
+                                                            <span> </span>
+                                                            <div class="pay-method-img">
+                                                                <img src="images/ic-PAY_CHUYENKHOAN.png" alt="" class="img-fluid">
+                                                            </div>
+                                                             Thanh toán qua chuyển khoản
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="radio" id="pay_method_3" name="pay_method" value="3">
+    
+                                                        <label for="pay_method_3">
+                                                            <span> </span>
+                                                            <div class="pay-method-img">
+                                                                <img src="images/ic-PAY_THETINDUNG_MASTERCARD.png" alt="" class=" img-fluid">
+                                                            </div>
+                                                            
+                                                            Thanh toán qua Mastercard
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="radio" id="pay_method_4" name="pay_method" value="4">
+    
+                                                        <label for="pay_method_4">
+                                                            <span> </span>
+                                                            <div class="pay-method-img">
+                                                                <img src="images/ic-PAY_VNPAY.png" alt="" class="img-fluid">
+                                                            </div>
+                                                            
+                                                            Thanh toán qua VNPay
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="radio" id="pay_method_5" name="pay_method" value="5">
+    
+                                                        <label for="pay_method_5">
+                                                            <span> </span>
+                                                            <div class="pay-method-img">
+                                                                <img src="images/ic-PAY_MOMO.png" alt="" class="img-fluid">
+                                                            </div>
+                                                            
+                                                            Thanh toán qua MOMO
+                                                        </label>
+                                                    </div>
+    
+                                                </div>
+        
+                                                <div class="cart-page-actions text-right">
+                                                    <a href="javascript:void(0);" class="go-back text-underline d-inline-block mr-lg-4 mr-2" @click="prevCartStep()">
+                                                        Nhập lại thông tin
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="btn-custom btn-color text-uppercase d-inline-block" @click="nextCartStep()">
+                                                        TIẾN HÀNH THANH TOÁN
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div id="step3"  v-if=" currentCartStep == 3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="success-page text-center cart-steps-content">
+                                        <img src="images/cart-success.png" alt="">
+                                        <p class="big-text text-uppercase">
+                                            CHÚC MỪNG BẠN! </br>
+                                            đã thanh toán thành công!
+                                        </p>
+                                        <p class="desc">
+                                            Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi </br>
+                                            Chúng tôi sẽ liên hệ quý khách để xác nhận lại đơn hàng trong thời gian sớm nhất!  </br>
+                                            Xin chân thành cảm ơn! 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </main>
+        <myfooter></myfooter>
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/httpvueloader.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/mmenu/mmenu.js"></script>
+    <script src="libs/bootstrap/popper.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- flatpickr js-->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                product: [],
+                loadingProduct: '',
+                post: [],
+                loadingPost: '',
+                swiperFeatured: null,
+                swiperFeaturedOptions: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                    speed: 800,
+                    autoHeight: true,
+                    lazy: {
+                        loadPrevNext: true,
+                    }
+                },
+                currentCartStep: 1,
+
+            },
+            methods: {
+                prevCartStep : function() {
+                    this.currentCartStep --
+                },
+                nextCartStep : function() {
+                    this.currentCartStep ++
+                },
+            },
+            components: {
+                myheader: httpVueLoader("vue_components/header.vue"),
+                breadcrumb: httpVueLoader("vue_components/breadcrumb.vue"),
+                myfooter: httpVueLoader("vue_components/footer.vue"),
+                'product-item': httpVueLoader("vue_components/productItem.vue"),
+                dichvuitem: httpVueLoader("vue_components/dichvuitem.vue")
+            },
+            mounted() {
+
+                this.$nextTick(() => {
+                    $(window).bind("load", function() {
+                        AOS.init({
+                                once: true
+                        })
+                    });
+                });
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+.wp-footer {
+    padding-top: 84px;
+    padding-bottom: 65px;
+    border-top: 1px solid #EEEEEE;
+    .logo-footer {
+        padding-bottom: 85px;
+        margin-top: -35px;
+        a {
+            display: block;
+            img {
+                max-width: 100%;
+            }
+        }
+        .picture-bct {
+            text-align: center;
+        }
+    }
+    .title-footer {
+        color: #01BFE8;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        &:before {
+            content: '';
+            position: absolute;
+            background: #FEB109;
+            width: 74px;
+            height: 1px;
+            bottom: 0;
+        }
+    }
+}
+
+.list-info-company {
+    display: flex;
+    flex-wrap: wrap;
+    .item-info-company {
+        width: 42%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 17px;
+        &:first-child {
+            width: 100%;
+        }
+        &:nth-child(2n-1) {
+            margin-left: auto;
+        }
+        .icon {
+            position: relative;
+            top: -2px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.block-info-footer {
+    padding-left: 75px;
+}
+
+.content-item-info-company {
+    .list-address-company {
+        display: flex;
+        .item-address-company {
+            width: 45%;
+            &:nth-child(2n+2) {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.item-info-company .content-item-info-company a {
+    color: #333333;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.item-address-company {
+    h3 {
+        color: #01BFE8;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    p {
+        margin-bottom: 0;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.block-item-footer {
+    display: flex;
+    .item-footer-link {
+        width: 105px;
+        &:nth-child(2) {
+            flex: 1;
+            padding-left: 75px;
+        }
+    }
+    .txt-item-footer {
+        display: block;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.block-copyright {
+    background: #01BFE8;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin-bottom: 0;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.fixed-icons {
+    position: fixed;
+    bottom: 55px;
+    right: 10px;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .fixed-item {
+        margin-bottom: 12px;
+    }
+}
+@media (min-width:1200px) and (max-width:1599px) {
+    .wp-footer {
+        padding-bottom: 40px;
+    }
+    .wp-footer .logo-footer {
+        padding-bottom: 45px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .block-info-footer {
+        padding-left: 25px;
+    }
+    .content-item-info-company {
+        .list-address-company {
+            display: block;
+            .item-address-company {
+                width: 100%;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .list-info-company {
+        .item-info-company {
+            width: 100%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .block-info-footer {
+        padding-left: 25px;
+    }
+    .wp-footer {
+        padding: 50px 0;
+        .logo-footer {
+            padding-bottom: 25px;
+            margin-top: 0;
+        }
+    }
+    .block-item-footer .item-footer-link:nth-child(2) {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width:576px) and (max-width:991px) {
+    .wp-footer {
+        padding: 40px 0;
+        .logo-footer {
+            padding-bottom: 25px;
+            margin-top: 0;
+        }
+    }
+    .block-info-footer {
+        padding: 30px 0 30px;
+    }
+}
+
+@media (max-width:575px) {
+    .wp-footer {
+        padding: 40px 0;
+        .logo-footer {
+            padding-bottom: 25px;
+            margin-top: 0;
+            width: 240px;
+        }
+    }
+    .block-info-footer {
+        padding: 30px 0 30px;
+    }
+    .block-item-footer {
+        .item-footer-link {
+            &:nth-child(2) {
+                padding-left: 25px;
+            }
+        }
+    }
+    .content-item-info-company {
+        .list-address-company {
+            display: block;
+            .item-address-company {
+                width: 100%;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .list-info-company {
+        .item-info-company {
+            width: 100%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .block-copyright p {
+        font-size: 15px;
+    }
+}

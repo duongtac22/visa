@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/aos/aos.css">
+    <link rel="stylesheet" href="libs/mmenu/mmenu.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="home">
+    <div id="app">
+        <myheader></myheader>
+
+        <main class="main-content">
+
+            <!-- breadcrumb -->
+            <!-- <breadcrumb></breadcrumb> -->
+            <!-- block list-->
+
+            <!-- banner home -->
+
+            <div class="block-banner-home">
+                <div class="swiper-container" id="slide-banner-home">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item-slide-banner">
+                                <a href="javascript:void(0);">
+                                    <img data-src="images/banner_home.jpg" alt="" class="swiper-lazy">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item-slide-banner">
+                                <a href="javascript:void(0);">
+                                    <img data-src="images/banner_home.jpg" alt="" class="swiper-lazy">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- box search home-->
+
+            <div class="block-search-home" data-aos="fade-up" data-aos-duration="1500">
+                <div class="container">
+                    <div class="block-search-home-wrapper">
+                        <h2 class="title">
+                            Bạn muốn làm Visa đi nước nào?
+                        </h2>
+                        <form action="" class="form-search-home">
+                            <div class="search-home-input">
+                                <span class="icons">
+                                    <svg width="19" height="24" viewBox="0 0 19 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.33333 0C4.1869 0 0 4.1869 0 9.33333C0 11.8333 1.51462 15.0438 4.50176 18.8751C5.87031 20.6259 7.35238 22.285 8.93838 23.8415C9.04472 23.9432 9.18619 24 9.33333 24C9.48048 24 9.62195 23.9432 9.72829 23.8415C11.3143 22.285 12.7964 20.6259 14.1649 18.8751C17.152 15.0438 18.6667 11.8333 18.6667 9.33333C18.6667 4.1869 14.4798 0 9.33333 0ZM9.33333 16C5.65714 16 2.66667 13.0095 2.66667 9.33333C2.66667 5.65714 5.65714 2.66667 9.33333 2.66667C13.0095 2.66667 16 5.65714 16 9.33333C16 13.0095 13.0095 16 9.33333 16Z"
+                                            fill="#3A3A3A" fill-opacity="0.3" />
+                                        <circle cx="9.29241" cy="9.42128" r="4.05263" fill="#3A3A3A"
+                                            fill-opacity="0.3" />
+                                    </svg>
+                                </span>
+                                <input type="text" class="custom-input" placeholder="Nhập tên nước bạn muốn đến">
+                            </div>
+
+
+                            <button class="btn-submit btn-search">
+                                <span class="icons">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path
+                                                d="M23.6738 20.7527L18.9994 16.0783C18.8947 15.9738 18.7705 15.891 18.6338 15.8347C18.4971 15.7783 18.3507 15.7494 18.2028 15.7498H17.4392C18.9657 13.7919 19.6878 11.3256 19.4585 8.85363C19.2292 6.38167 18.0657 4.09026 16.2051 2.44661C14.3446 0.802971 11.9272 -0.0691249 9.4458 0.00814708C6.96443 0.0854191 4.60596 1.10624 2.8513 2.86246C1.09664 4.61869 0.0779129 6.97806 0.00284564 9.45949C-0.0722217 11.9409 0.802021 14.3576 2.44732 16.2166C4.09261 18.0757 6.38506 19.2372 8.85722 19.4644C11.3294 19.6915 13.7951 18.9671 15.7516 17.4389V18.2025C15.7512 18.3504 15.7801 18.4968 15.8364 18.6335C15.8928 18.7702 15.9756 18.8945 16.0801 18.9991L20.7545 23.6735C20.8587 23.7782 20.9824 23.8612 21.1188 23.9179C21.2551 23.9745 21.4012 24.0037 21.5489 24.0037C21.6965 24.0037 21.8427 23.9745 21.979 23.9179C22.1153 23.8612 22.2391 23.7782 22.3432 23.6735L23.6693 22.3474C23.8809 22.1363 24.0002 21.8499 24.001 21.551C24.0018 21.2521 23.8842 20.9651 23.6738 20.7527ZM9.75101 15.7513C8.56421 15.7513 7.40406 15.3994 6.41728 14.74C5.43049 14.0807 4.66138 13.1435 4.20721 12.047C3.75304 10.9506 3.63421 9.74406 3.86575 8.58006C4.09728 7.41607 4.66878 6.34687 5.50797 5.50768C6.34717 4.66848 7.41636 4.09699 8.58036 3.86545C9.74435 3.63392 10.9509 3.75275 12.0473 4.20692C13.1438 4.66109 14.0809 5.43019 14.7403 6.41698C15.3996 7.40377 15.7516 8.56392 15.7516 9.75072C15.7516 11.3422 15.1194 12.8684 13.994 13.9938C12.8687 15.1191 11.3425 15.7513 9.75101 15.7513Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="24.0007" height="24.0053" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Tìm kiếm
+                            </button>
+                        </form>
+
+                        <ul class="suggest-search pl-0 m-0">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Mỹ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Anh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Đức
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Nhật Bản
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Thái Lan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Úc
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Hàn Quốc
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Visa Singapore
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- block top noi bat -->
+
+            <div class="block-featured">
+                <div class="container-fluid">
+                    <h2 class="title text-center">
+                        Top địa điểm làm Visa <span class="color-theme font-weight-bold">nổi bật</span>
+                    </h2>
+
+                    <div class="block-featured-list swiper-container custom-dots" id="swiperFeatured" rel="swiperFeatured" :key="loadingProduct">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="item in product" :key="item.ProductID">
+                                <product-item :cate="item.Category" :productid="item.ProductID" :name="item.Name" :price="item.Price" :mprice="item.RetailPrice" :img="item.ThumbnailURL">
+                                </product-item>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- block dich vu noi bat -->
+
+            <div class="block-featured-service">
+                <div class="container">
+                    <ul class="tab-list nav page-tabs-list">
+                        <li data-id="my-tab-1" class="nav-item tabs-list-item active">
+                            <a data-toggle="tab" href="#my-tab-1" role="tab" aria-controls="my-tab-1" aria-selected="true" class="active show">
+                                Dịch vụ Visa cho người Việt Nam
+                            </a>
+                        </li>
+                        <li data-id="my-tab-2" class="nav-item tabs-list-item">
+                            <a data-toggle="tab" href="#my-tab-2" role="tab" aria-controls="my-tab-2" aria-selected="false" class="">
+                                Dịch vụ Visa cho người nước ngoài
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content bs-tab-content">
+
+                        <div id="my-tab-1" role="tabpanel" class="tab-pane active show custom-dots">
+
+                            <div class="block-featured-dichvu-list swiper-container custom-navs " id="swiperDichvu" rel="swiperDichvu">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for="items in 8">
+                                        <dichvuitem></dichvuitem>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="dichvu-item">
+                                            <a href="javascript:void(0);" class="dichvu-img">
+                                                <img class="lazy" src="../images/blank.svg" data-src="images/dichvu-1.png" alt="name">
+                                            </a>
+                                            <div class="dichvu-info">
+                                                <h3 class="name">
+                                                    Visa du lịch
+                                                </h3>
+                                                <div class="list">
+                                                    <a href="javascript:void(0);" class="list-item">
+                                                        Visa du lịch New Zealand từ Hà Nội
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="list-item">
+                                                        Visa du lịch Nam Phi từ Hà Nội
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="list-item">
+                                                        Visa du lịch Nhật Bản từ Tp. Hồ Chí Minh
+                                                    </a>
+                                                </div>
+                                    
+                                                <a href="javascript:void(0);" class="dichvu-action btn-custom btn-color w-100">
+                                                    Nhận tư vấn
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next service-navigations">
+                                <span class="icons">
+
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.42612 18C1.28866 18 1.13402 17.9279 1.03093 17.8196L0.171821 16.9178C0.0687288 16.8096 7.27676e-07 16.6473 7.21369e-07 16.503C7.15062e-07 16.3587 0.0687288 16.1964 0.171821 16.0882L6.9244 9L0.171821 1.91182C0.0687281 1.80361 7.17427e-08 1.64128 6.54357e-08 1.49699C5.83402e-08 1.33467 0.0687281 1.19038 0.17182 1.08216L1.03093 0.180361C1.13402 0.0721442 1.28866 -5.63291e-08 1.42612 -6.23375e-08C1.56357 -6.8346e-08 1.71821 0.0721441 1.8213 0.180361L9.82818 8.58517C9.93127 8.69339 10 8.85571 10 9C10 9.14429 9.93127 9.30661 9.82818 9.41483L1.82131 17.8196C1.71821 17.9279 1.56357 18 1.42612 18Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="swiper-button-prev service-navigations">
+                                <span class="icons">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.57388 1.87013e-07C8.71134 1.68987e-07 8.86598 0.0721475 8.96907 0.180361L9.82818 1.08217C9.93127 1.19038 10 1.35271 10 1.497C10 1.64128 9.93127 1.80361 9.82818 1.91183L3.0756 9L9.82818 16.0882C9.93127 16.1964 10 16.3587 10 16.503C10 16.6653 9.93127 16.8096 9.82818 16.9178L8.96907 17.8196C8.86598 17.9279 8.71134 18 8.57388 18C8.43643 18 8.28179 17.9279 8.1787 17.8196L0.171821 9.41483C0.0687283 9.30662 -2.07612e-07 9.14429 -2.26533e-07 9C-2.45454e-07 8.85571 0.0687282 8.69339 0.171821 8.58517L8.17869 0.180361C8.28179 0.0721476 8.43642 2.05038e-07 8.57388 1.87013e-07Z"
+                                            fill="#848383" fill-opacity="0.5" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="d-block text-center block-featured-service-actions">
+                                <a href="javascript:void(0);" class="btn-custom btn-nocolor">
+                                    Xem thêm dịch vụ
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div id="my-tab-2" role="tabpanel" class="tab-pane fade custom-dots">
+
+                            <div class="block-featured-dichvu-list swiper-container custom-navs" id="swiperDichvu2" rel="swiperDichvu2">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for="items in 8">
+                                        <dichvuitem></dichvuitem>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next service-navigations">
+                                <span class="icons">
+
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.42612 18C1.28866 18 1.13402 17.9279 1.03093 17.8196L0.171821 16.9178C0.0687288 16.8096 7.27676e-07 16.6473 7.21369e-07 16.503C7.15062e-07 16.3587 0.0687288 16.1964 0.171821 16.0882L6.9244 9L0.171821 1.91182C0.0687281 1.80361 7.17427e-08 1.64128 6.54357e-08 1.49699C5.83402e-08 1.33467 0.0687281 1.19038 0.17182 1.08216L1.03093 0.180361C1.13402 0.0721442 1.28866 -5.63291e-08 1.42612 -6.23375e-08C1.56357 -6.8346e-08 1.71821 0.0721441 1.8213 0.180361L9.82818 8.58517C9.93127 8.69339 10 8.85571 10 9C10 9.14429 9.93127 9.30661 9.82818 9.41483L1.82131 17.8196C1.71821 17.9279 1.56357 18 1.42612 18Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="swiper-button-prev service-navigations">
+                                <span class="icons">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.57388 1.87013e-07C8.71134 1.68987e-07 8.86598 0.0721475 8.96907 0.180361L9.82818 1.08217C9.93127 1.19038 10 1.35271 10 1.497C10 1.64128 9.93127 1.80361 9.82818 1.91183L3.0756 9L9.82818 16.0882C9.93127 16.1964 10 16.3587 10 16.503C10 16.6653 9.93127 16.8096 9.82818 16.9178L8.96907 17.8196C8.86598 17.9279 8.71134 18 8.57388 18C8.43643 18 8.28179 17.9279 8.1787 17.8196L0.171821 9.41483C0.0687283 9.30662 -2.07612e-07 9.14429 -2.26533e-07 9C-2.45454e-07 8.85571 0.0687282 8.69339 0.171821 8.58517L8.17869 0.180361C8.28179 0.0721476 8.43642 2.05038e-07 8.57388 1.87013e-07Z"
+                                            fill="#848383" fill-opacity="0.5" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="d-block text-center block-featured-service-actions">
+                                <a href="javascript:void(0);" class="btn-custom btn-nocolor">
+                                    Xem thêm dịch vụ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- block why us-->
+
+
+            <div class="block-whyus">
+                <div class="whyus-top">
+                    <div class="container">
+                        <h2 class="title" data-aos="fade-up" data-aos-duration="1250">
+                            Vì sao nên chọn dịch vụ Visa của ASM?
+                        </h2>
+                        <div class="counter-up" data-counter=".js-counter-up">
+                            <div class="box">
+                                <div class="value">
+                                    <div class="counter js-counter-up"  data-countup="15">
+                                        15
+                                    </div>
+                                    <span class="icon">
+                                        +
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    Năm kinh nghiệm
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="value">
+                                    <div class="counter js-counter-up" data-countup="100">
+                                        100
+                                    </div>
+                                    <span class="icon">
+                                        %
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    Khách hàng hài lòng
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="value">
+                                    <div class="counter js-counter-up" data-countup="98">
+                                        98
+                                    </div>
+                                    <span class="icon">
+                                        %
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    Tỉ lệ đậu Visa cao
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="value">
+                                    <div class="not-counter">
+                                        24/7
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Tư vấn miễn phí
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whyus-bot" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-security.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Bảo mật cao
+                                    </h3>
+                                    <p class="desc">
+                                        Cam kết thực hiện nguyên tắc bảo mật tuyệt đối thông tin của khách hàng.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-formality.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Thủ tục nhanh gọn
+                                    </h3>
+                                    <p class="desc">
+                                        Quy trình tư vấn visa, tiếp nhận, hoàn thiện và nộp hồ sơ một cách nhanh gọn, rõ ràng.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-advisory.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Tư vấn miễn phí
+                                    </h3>
+                                    <p class="desc">
+                                        Hệ thống tổng đài điện thoại hoạt động 24/7 tư vấn miễn phí thông tin visa các nước.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-exam.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Kiểm tra online
+                                    </h3>
+                                    <p class="desc">
+                                        Kiểm tra tỉ lệ đậu Visa chỉ mất 3 phút trả lời 4 câu hỏi đơn giản, bạn sẽ biết ngay tỷ lệ đậu Visa của mình.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-fee.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Chi phí tối ưu
+                                    </h3>
+                                    <p class="desc">
+                                        Chi phí công khai, minh bạch. Thông tin đầy đủ, chính xác. Tối ưu chi phí làm thủ tục đăng ký Visa
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="box">
+                                    <div class="icon">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/ic-guarantee.png" alt="">
+                                    </div>
+                                    <h3 class="name">
+                                        Chuyên nghiệp - Uy Tín
+                                    </h3>
+                                    <p class="desc">
+                                        Dịch vụ visa trọn gói uy tín - chất lượng - trên 15 năm kinh nghiệm với các hồ sơ khó.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- block subscribe-->
+
+            <div class="block-subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 hide-mb">
+                            <img class="lazy" src="../images/blank.svg" data-src="images/ic-subscribe.png" alt="">
+                        </div>
+                        <div class="col">
+                            <div class="subscribe-box">
+                                <div class="title">
+                                    <div class="big-text">
+                                        Đi đến bất kỳ nơi đâu trên toàn thế giới
+                                    </div>
+                                    <div class="small-text">
+                                        cùng dịch vụ Visa uy tín của Asm
+                                    </div>
+                                </div>
+
+                                <form action="" class="subscribe-form">
+                                    <input type="text" class="custom-input" placeholder="Nhập Email của bạn ">
+                                    <button class="btn-submit">
+                                        Gửi
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- list tin tức -->
+
+            <div class="block-home-artilce">
+                <div class="container-fluid">
+                    <h2 class="title text-center" data-aos="fade-up" data-aos-duration="1250">
+
+                        Tin tức về Visa <span class="color-theme font-weight-bold">mới nhất</span>
+
+                    </h2>
+
+                    <div class="home-article-list" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+                        <div class="row">
+                            <div class="col-xxl-3 col-lg-6 col-12 home-article-wrap" v-for="item in 4">
+                                <div class="home-article big-box">
+                                    <a href="javascript:void(0);" class="artilce-img">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/article/news1.png" alt="">
+                                    </a>
+                                    <div class="article-info">
+                                        <p class="created-date"> 22/01/2020</p>
+                                        <a href="javascript:void(0);" class="article-name">
+                                            Thông báo đăng ký nguyện vọng về nước trước Tết từ Hàn Quốc
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="home-article small-box">
+                                    <a href="javascript:void(0);" class="artilce-img">
+                                        <img class="lazy" src="../images/blank.svg" data-src="images/article/news1.png" alt="">
+                                    </a>
+                                    <div class="article-info">
+                                        <p class="created-date"> 22/01/2020</p>
+                                        <a href="javascript:void(0);" class="article-name">
+                                            Thông báo đăng ký nguyện vọng về nước trước Tết từ Hàn Quốc
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-block text-center block-home-artilce-actions" data-aos="fade-up" data-aos-duration="1250">
+                        <a href="javascript:void(0);" class="btn-custom btn-nocolor">
+                            Xem thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- customerreivew-->
+            <div class="block-customer-review swiper-container custom-dots" id="swiperReview">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="item in 5" :key="item">
+                        <div class="block-customer-row">
+                            <div class="block-customer-bigcol">
+                                <a href="javascript:void(0);" class="big-img">
+                                    <img class="lazy" src="../images/blank.svg" data-src="images/customer-review.png" alt="">
+                                </a>
+                            </div>
+                            <div class="block-customer-smallcol">
+
+                                <div class="customer-review-wrap">
+
+                                    <h2 class="title">
+                                        Đánh giá của khách hàng
+                                    </h2>
+
+                                    <div class="list-customer-review" >
+
+                                    
+                                                <div class="customer-review-item">
+
+                                                    <a href="javascript:void(0);" class="customer-ava">
+                                                        <img src="images/customer-ava.png" alt="">
+                                                    </a>
+                                                    <p class="customer-name">
+                                                        Chị Minh Hương
+                                                    </p>
+
+                                                    <p class="customer-review-content">
+                                                        Mình thật sự rất vui khi đậu phỏng vấn visa Singapore cùng chồng và 2 con do công ty hỗ trợ. Gia đình mình đã có chuyến đi rất ý nghĩa dịp giáng sinh. Và mình nhất định sẽ nhờ công ty làm visa nước khác nữa để có thêm trải nghiệm mới. Thật sự rất cám
+                                                        ơn.
+                                                    </p>
+                                                </div>
+                                        
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- video home-->
+            <div class="block-video-home">
+                <div class="container">
+                    <div class="block-video-home-content">
+                        <div class="video-wrapper">
+                            <a data-fancybox="" data-width="1000" data-height="560" href="https://www.youtube.com/watch?v=qCa64XOO5Ng&ab_channel=LostInLofi" class="video-images">
+
+                                <img src="images/img-video.png" alt="">
+
+                                <span class="play-button">
+                                    <img src="images/ic-play.png" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="form-register">
+                            <div class="form-register-wrap">
+                                <h3 class="title">
+                                    ĐĂNG KÝ NGAY ĐỂ NHẬN TƯ VẤN MIỄN PHÍ
+                                </h3>
+                                <p class="desc">
+                                    Hãy để lại thông tin để không bỏ lỡ các chương trình ưu đãi từ ASM
+                                </p>
+                                <form action="" class="register-form validation-form" onsubmit="return false ;" novalidate>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="registerName" aria-describedby="registerNameHelp" placeholder="Họ tên" required>
+                                        <div class=" validate-form invalid-feedback">
+                                            Error
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="registerEmail" aria-describedby="registerEmailHelp" placeholder="Email" required>
+                                        <div class=" validate-form invalid-feedback">
+                                            Error
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="registerTel" aria-describedby="registerTelHelp" placeholder="Số điện thoại" required>
+                                        <div class=" validate-form invalid-feedback">
+                                            Error
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="registerNotes" rows="5" value="Ghi chú"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-custom">GỬI</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Doi tac -->
+            <div class="wp-slide-partner">
+                <div class="title-section-slide-partner">
+                    <h2>Đối tác của chúng tôi</h2>
+                </div>
+                <div class="swiper-container" id="slider-partner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-1.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-2.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-3.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-4.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-5.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-6.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-7.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-6.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-5.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-4.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-7.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-8.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0);">
+                                <img data-src="images/partner-9.png" alt="" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-slide bg-left-slide"></div>
+                    <div class="bg-slide bg-right-slide"></div>
+                    <div class="swiper-pagination" id="pagination-partner"></div>
+                </div>
+
+            </div>
+        </main>
+        <myfooter></myfooter>
+
+        
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/httpvueloader.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/mmenu/mmenu.js"></script>
+    <script src="libs/bootstrap/popper.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- flatpickr js-->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <!-- lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.6/dist/lazyload.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                product: [],
+                loadingProduct: '',
+                post: [],
+                loadingPost: '',
+                totalQuestion : 3,
+                currentStep : 0 ,
+                isCompleteTest : false
+            },
+            components: {
+                myheader: httpVueLoader("vue_components/header.vue"),
+                breadcrumb: httpVueLoader("vue_components/breadcrumb.vue"),
+                myfooter: httpVueLoader("vue_components/footer.vue"),
+                'product-item': httpVueLoader("vue_components/productItem.vue"),
+                dichvuitem: httpVueLoader("vue_components/dichvuitem.vue")
+            },
+            methods: {
+                prevStep : function() {
+                    this.currentStep --
+                },
+                nextStep : function() {
+                    this.currentStep ++
+                },
+                sendForm : function() {
+                    this.isCompleteTest = true ;
+                },
+                getDataProduct: function() {
+                    fetch(`json/product.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.product = result;
+                            this.loadingProduct = true;
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                },
+                getDataPost: function() {
+                    fetch(`json/post.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.post = result;
+                            this.loadingPost = true;
+
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                }
+            },
+            created: function() {
+                this.getDataProduct();
+                this.getDataPost();
+            },
+            mounted() {
+
+
+                this.$nextTick(() => {
+                    $(window).bind("load", function() {
+
+                        var lazyLoadInstance = new LazyLoad({
+                            elements_selector: ".lazy"
+                        });
+                        AOS.init({
+                                once: true
+                            })
+                            // Slide Banner
+                        var swiperBannerTopDes = new Swiper("#slide-banner-home", {
+                            spaceBetween: 0,
+                            slidesPerView: 1,
+                            speed: 800,
+                            autoHeight: true,
+                            effect: 'coverflow',
+                            coverflowEffect: {
+                                rotate: 30,
+                                slideShadows: false,
+                            },
+                            // Enable lazy loading
+                            lazy: {
+                                loadPrevNext: true,
+                            }
+                        });
+
+                        var swiperFeatured = new Swiper("#swiperFeatured", {
+                            spaceBetween: 30,
+                            slidesPerView: 5,
+                            speed: 800,
+                            pagination: {
+                                el: "#swiperFeatured .swiper-pagination",
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                1920: {
+                                    slidesPerView: 5,
+                                },
+                                1600: {
+                                    slidesPerView: 3.8,
+                                },
+                                1460: {
+                                    slidesPerView: 3.2,
+                                },
+                                1230: {
+                                    slidesPerView: 2.4,
+                                },
+                                992: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 1.8,
+                                },
+                                680: {
+                                    slidesPerView: 1,
+                                },
+                            },
+                            // Enable lazy loading
+                            preloadImages:false,
+                            lazy:{loadPrevNext:true,},
+                        });
+
+                        var swiperDichvu = new Swiper("#my-tab-1 .swiper-container", {
+                            spaceBetween: 30,
+                            slidesPerView: 5,
+                            speed: 800,
+                            observer: true,
+                            observeParents: true,
+                            navigation: {
+                                nextEl: '#my-tab-1 .service-navigations.swiper-button-next',
+                                prevEl: '#my-tab-1 .service-navigations.swiper-button-prev',
+                            },
+                            breakpoints: {
+                                680: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 1.8,
+                                },
+                                992: {
+                                    slidesPerView: 2,
+                                },
+                                1920: {
+                                    slidesPerView: 3,
+                                }
+                            },
+                            // Enable lazy loading
+                            preloadImages:false,
+                            lazy:{loadPrevNext:true,},
+                        });
+                        var swiperDichvu2 = new Swiper("#my-tab-2 .swiper-container", {
+                            spaceBetween: 30,
+                            slidesPerView: 5,
+                            speed: 800,
+                            observer: true,
+                            observeParents: true,
+                            navigation: {
+                                nextEl: '#my-tab-2 .service-navigations.swiper-button-next',
+                                prevEl: '#my-tab-2 .service-navigations.swiper-button-prev',
+                            },
+                            breakpoints: {
+                                680: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 1.8,
+                                },
+                                992: {
+                                    slidesPerView: 2,
+                                },
+                                1920: {
+                                    slidesPerView: 3,
+                                }
+                            },
+                            // Enable lazy loading
+                            preloadImages:false,
+                            lazy:{loadPrevNext:true,},
+                        });
+                        var swiperReview = new Swiper("#swiperReview", {
+                            spaceBetween: 0,
+                            slidesPerView: 1,
+                            speed: 800,
+                            autoHeight: true,
+                            pagination: {
+                                el: "#swiperReview .swiper-pagination",
+                                clickable: true,
+                            }
+                        });
+
+                        var swiperDoiTac = new Swiper("#slider-partner", {
+                            spaceBetween: 0,
+                            slidesPerView: 9,
+                            speed: 800,
+                            roundLengths: true,
+                            freeMode: false,
+                            speed: 500,
+                            pagination: {
+                                el: "#pagination-partner",
+                                clickable: true,
+                            },
+                            // Enable lazy loading
+                            preloadImages:false,
+                            lazy:{loadPrevNext:true,},
+                            breakpoints: {
+                                1600: {
+                                    slidesPerView: 7,
+                                },
+                                1366: {
+                                    slidesPerView: 6,
+                                },
+                                1200: {
+                                    slidesPerView: 5,
+                                },
+                                991: {
+                                    slidesPerView: 4,
+                                },
+                                767: {
+                                    slidesPerView: 3,
+                                },
+                                575: {
+                                    slidesPerView: 2,
+                                }
+                            },
+                            // Enable lazy loading
+                            preloadImages:false,
+                            lazy:{loadPrevNext:true,},
+                        });
+
+                        /// bs4 validate
+                        var forms = document.getElementsByClassName('validation-form');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+
+                        // flatpickr popup cart
+                        $('.js-cart-item-date').each(function(){
+
+                            $(this).flatpickr({
+                                dateFormat: "d/m/Y",
+                            });
+                        })
+                    });
+                });
+            }
+        });
+    </script>
+
+
+<script>
+    function backTop() {
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
+}
+</script>
+</body>
+
+</html>

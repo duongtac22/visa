@@ -1,0 +1,168 @@
+// set width cho cột cho flex
+@mixin col-w($width) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 $width;
+  flex: 0 0 $width;
+  max-width: $width;
+}
+
+// tạo danh sách khoảng các margin và padding theo class .m, .mr, .ml, .mt, .mb, .p, .pr, .pl, .pt, .pt (vd .m10)
+$spaceamounts: (0, 10, 20, 30, 50);
+$sides: (top, bottom, left, right, all);
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side == "all" {
+      .m#{$space} {
+        margin: #{$space}px;
+      }
+
+      .p#{$space} {
+        padding: #{$space}px;
+      }
+    } @else {
+      .m#{str-slice($side, 0, 1)}#{$space} {
+        margin-#{$side}: #{$space}px;
+      }
+
+      .p#{str-slice($side, 0, 1)}#{$space} {
+        padding-#{$side}: #{$space}px;
+      }
+    }
+  }
+}
+
+// tạo danh sách font site theo class .fs- (vd .fs-12)
+@for $i from 10 through 50 {
+  .fs-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+$theme: #ff1d21;
+
+// Fix theo screen
+
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1024px;
+$xl: 1200px;
+
+@mixin rps-max($screen) {
+  @if $screen == xs {
+    @media (max-width: $xs) {
+      @content;
+    }
+  } @else if $screen == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $screen == md {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if $screen == lg {
+    @media (max-width: $lg) {
+      @content;
+    }
+  } @else if $screen == xl {
+    @media (max-width: $xl) {
+      @content;
+    }
+  }
+}
+
+@mixin rps-min($screen) {
+  @if $screen == xs {
+    @media (min-width: $xs) {
+      @content;
+    }
+  } @else if $screen == sm {
+    @media (min-width: $sm) {
+      @content;
+    }
+  } @else if $screen == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if $screen == lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if $screen == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}
+
+@mixin rps-min-max($screen-min, $screen-max) {
+  @if $screen-min == xs && $screen-max == sm {
+    @media (min-width: $xs) and (max-width: $sm) {
+      @content;
+    }
+  } @else if $screen-min == sm && $screen-max == md {
+    @media (min-width: $sm) and (max-width: $md) {
+      @content;
+    }
+  } @else if $screen-min == md && $screen-max == lg {
+    @media (min-width: $md) and (max-width: $lg) {
+      @content;
+    }
+  } @else if $screen-min == lg && $screen-max == xl {
+    @media (min-width: $lg) and (max-width: $xl) {
+      @content;
+    }
+  }
+}
+
+// Giới hạn dòng
+@mixin line-clamp($limit) {
+  @if $limit == 1 {
+    -webkit-line-clamp: 1;
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  } @else if $limit == 2 {
+    -webkit-line-clamp: 2;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  } @else if $limit == 3 {
+    -webkit-line-clamp: 3;
+    line-height: 25px;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  } @else if $limit == 4 {
+    -webkit-line-clamp: 4;
+    line-height: 25px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  } @else if $limit == 5 {
+    -webkit-line-clamp: 5;
+    line-height: 25px;
+    height: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin reset-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,111 @@
+.wp-slide-partner {
+    background: #F2F4FD;
+    padding: 60px 0 50px;
+    .swiper-slide {
+        text-align: center;
+        a {
+            display: flex;
+            align-items: center;
+            height: 108px;
+            border-right: 0.5px solid #848383;
+            text-align: center;
+            justify-content: center;
+            img {
+                max-width: 100%;
+            }
+        }
+        &:last-child a {
+            border: none;
+        }
+    }
+    .bg-slide {
+        position: absolute;
+        width: 208px;
+        height: 148px;
+        background: linear-gradient(90deg, #F2F4FD 12.01%, rgba(242, 244, 253, 0.737918) 47.46%, rgba(242, 244, 253, 0.557986) 76.63%, rgba(242, 244, 253, 0) 109.8%);
+        top: -20px;
+        z-index: 1;
+    }
+    .bg-left-slide {
+        left: 0;
+    }
+    .bg-right-slide {
+        right: 0;background: linear-gradient(270deg, #F2F4FD 12.01%, rgba(242, 244, 253, 0.737918) 47.46%, rgba(242, 244, 253, 0.557986) 76.63%, rgba(242, 244, 253, 0) 109.8%);
+    }
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 6px;
+        background: #BDBDBD;
+        opacity: 1;
+        outline: none;
+        &.swiper-pagination-bullet-active {
+            width: 15px;
+            height: 15px;
+            box-shadow: inset 0px 0px 0px 2px #fff;
+            background: #01BFE8;
+            border: 2px solid #01BFE8;
+        }
+    }
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        justify-content: center;
+    }
+    .swiper-container {
+        padding-bottom: 100px;
+    }
+    .title-section-slide-partner h2 {
+        text-align: center;
+        color: #3A3A3A;
+        font-size: 40px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1599px) {
+    .wp-slide-partner .bg-slide {
+        width: 200px;
+    }
+}
+
+@media (min-width:576px) and (max-width:991px) {
+    .wp-slide-partner {
+        padding: 40px 0;
+        .bg-slide {
+            width: 195px;
+        }
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    .wp-slide-partner .bg-slide {
+        width: 195px;
+    }
+    .wp-slide-partner .title-section-slide-partner h2 {
+        font-size: 31px;
+        margin-bottom: 50px;
+    }
+    .wp-slide-partner .swiper-container {
+        padding-bottom: 75px;
+    }
+}
+
+@media (max-width:575px) {
+    .wp-slide-partner {
+        padding: 40px 0;
+        .bg-slide {
+            display: none;
+        }
+        .swiper-container {
+            padding-bottom: 60px;
+        }
+        .title-section-slide-partner h2 {
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+    }
+}

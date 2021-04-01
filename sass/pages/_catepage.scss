@@ -1,0 +1,164 @@
+.cate-page {
+    .banner-cate {
+        display: inline-block;
+        width: 100%;
+        img {
+            width: 100%; 
+        }
+    }
+    &.cate-visa-page {
+        .picked-location {
+            padding: 43px 0 ; 
+        }
+        .picked-location-item {
+            h3.title {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: $color-bl;
+                margin: 0 0 21px 0 ; 
+            }
+            
+        }
+        .picked-location-left {
+            margin-bottom: 15px; 
+            .nation {
+                border: 0.5px solid $color-grey;
+                border-radius: 3px;
+                margin-bottom: 7px;
+                text-align: center;
+                cursor: pointer;
+                &.active , &:hover {
+                    border-color : transparent;
+                    background-color : $color-bg; 
+                    a {
+                        color : #fff !important  ; 
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $color-grey;
+                    display: inline-block;
+                    width: 100%;
+                    line-height: 41px;
+                }
+            }
+        }
+        .tab-content {
+            display: none;
+            margin-bottom: 20px;
+            &.active {
+                display: block; 
+            }
+        }
+        .nations-list-wrap {
+            // display: inline-block;
+            // width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            border: 0.5px solid $color-grey;
+            border-radius: 3px;
+            padding: 22px;
+            padding-bottom: 0;
+            .nations-item {
+                // float: left;
+                flex: 0 0 25%;
+                width: 25%;
+                padding: 0 12px;
+                // margin-bottom: 19px;
+                cursor: pointer;
+                input[type=radio] {
+                    appearance: none;
+                    display : none ; 
+                    &:checked+label span {
+                        border-color : $color-bg ;
+                        background: $color-bg ;
+                        box-shadow: inset 0 0 0px 3px #fff;
+                    }
+                }
+                
+                label {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 0;
+                    color : $color-grey;
+                    position: relative;
+                    padding-left: 30px;
+                    padding-bottom: 19px; 
+                    span {
+                        position: absolute;
+                        display: inline-block ; 
+                        width: 17px ;
+                        height: 17px;
+                        border: 1px solid $color-grey;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        top: 1px ; 
+                        left: 0 ; 
+                    }
+                }
+            }
+        }
+        .nations-actions {
+            text-align: right;
+            button {
+                display: inline-block;
+                width: 178px;
+                height: 36px;
+                background: #EEEEEE;
+                border-radius: 3px;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 34px;
+                color: $color-grey;
+                border : none; 
+                cursor: pointer;
+                .icon {
+                    margin-left: 13px;
+                    vertical-align: middle;
+                }
+                &:hover {
+                    color : $color-text ; 
+                    .icon svg path {
+                        fill : $color-text ; 
+                    }
+                }
+            }
+         
+        }
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .cate-page.cate-visa-page .nations-list-wrap .nations-item {
+        // width: 33.333%;
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 767px) {
+    .cate-page.cate-visa-page .nations-list-wrap .nations-item {
+        // width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 479px) {
+    .cate-page.cate-visa-page .nations-list-wrap {
+        max-height: 50vh;
+        overflow-y : scroll ;
+    }
+    .cate-page.cate-visa-page .nations-list-wrap .nations-item {
+        //width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

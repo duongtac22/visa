@@ -1,0 +1,98 @@
+.block-whyus {
+    .whyus-top {
+        background: #01BFE8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color : #fff ;
+        text-align: center;
+        padding: 30px 0;
+        h2.title {
+            font-size: 45px;
+            line-height: 54px;
+            color : #EAECF4;
+            margin: 0 0 40px 0;
+            @media (max-width: 1200px) {
+                font-size: 35px;
+                line-height: 1.2;
+                margin-bottom: 25px;
+            }
+            @media (max-width: 575px) {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .whyus-bot {
+        padding: 60px 0 7px 0;
+        .box {
+            text-align: center;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 50px;
+            h3.name {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                margin: 15px 0; 
+            }
+        }
+    }
+    
+    .counter-up {
+        @extend .d-flex , .flex-wrap ;
+        margin: 0 -15px;
+        .box {
+            @include col-w(25%);
+            padding : 0 15px;
+            margin-bottom: 25px;
+            .counter , .not-counter {
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 84px;
+            }
+            span.icon {
+                font-size: 45px;
+                line-height: 54px;
+                padding-left: 10px;
+            }
+            .value {
+                @extend .d-flex , .flex-wrap , .align-items-baseline , .justify-content-center;
+            }
+            .text {
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 20px;
+            }
+
+            @media (max-width: 1200px) {
+                @include col-w(50%);
+                .counter , .not-counter {
+                    font-size: 55px;
+                    line-height: 1.2;
+                }
+                span.icon {
+                    font-size: 55px;
+                    line-height: 1.2;
+                }
+                .text {
+                    font-size: 20px;
+                    line-height: 1.2;
+                }
+            }
+            @media (max-width: 575px) {
+                .counter , .not-counter {
+                    font-size: 35px;
+                    line-height: 1.2;
+                }
+                span.icon {
+                    font-size: 25px;
+                    line-height: 1.2;
+                }
+                .text {
+                    font-size: 16px;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}

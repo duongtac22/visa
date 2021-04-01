@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/aos/aos.css">
+    <link rel="stylesheet" href="libs/mmenu/mmenu.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+    <div id="app">
+        <myheader></myheader>
+
+        <main class="main-content">
+            <breadcrumb></breadcrumb>
+            <!-- visa list page-->
+            <div class="wp-news-page">
+                <div class="container">
+                    <h2 class="title-news-page">
+                        Tin tức nổi bật
+                    </h2>
+
+                    <div class="news-featured">
+                        <div class="row">
+                            <div class="col-xl-7 col-lg-6 col-12">
+                                <div class="news-big-featured">
+                                    <div class="featured-news">
+                                        <a href="javascript:void(0);" class="featured-news-img">
+                                            <img class="lazy" src="../images/blank.svg" data-src="images/article/featured-news-img.png" alt="Visa Nhật Bản du lịch, công tác, thăm thân (nhập cảnh 1 lần)">
+                                        </a>
+                                        <div class="featured-news-info">
+                                            <a href="javascript:void(0);" class="name">
+                                                Visa du lịch New Zealand từ Hà Nội
+                                            </a>
+                                            <p class="desc">
+                                                New Zealand – Vùng đất được mệnh danh là “xứ sở Kiwi” với khí hậu mát mẻ và con người vô cùng thân thiện, cảnh quan thiên nhiên kỳ vĩ đang là điểm đến ưa thích của nhiều người dân Việt Nam. Nhưng để được nhập cảnh vào quốc gia này thì du khách Việt Nam bắt buộc phải có visa. Vậy một bộ hồ sơ xin visa New Zealand đầy đủ cần chuẩn bị những gì? ASM xin chia sẻ với bạn những thông tin cần thiết trong quy trình xin visa du lịch New Zealand được tổng hợp từ nhiều nguồn giúp bạn.
+                                            </p>
+                                            <div class="btn-view-detail">
+                                            <a href="javascript:void(0);" class="view-more">
+                                                <span class="txt">Tìm hiểu thêm</span>
+                                                <span class="icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                                                        <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="#01BFE8"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-6 col-12">
+                                <div class="list-news-featured">
+                                    <div class="featured-news" v-for="items in 4">
+                                        <a href="javascript:void(0);" class="featured-news-img">
+
+                                            <img :data-src="'images/article/featured-news-small-img' + items + '.png'" class="lazy" src="../images/blank.svg" alt="">
+                                        </a>
+                                        <div class="featured-news-info">
+                                            <a href="javascript:void(0);" class="name">
+                                                Kinh nghiệm thực tế xin gia hạn Visa tại Đức
+                                            </a>
+                                            <p class="desc">
+                                                New Zealand – Vùng đất được mệnh danh là “xứ sở Kiwi” với khí hậu mát mẻ và con người vô cùng thân thiện, cảnh quan thiên nhiên kỳ vĩ đang là điểm đến ưa thích của nhiều người dân Việt Nam. Nhưng để được nhập cảnh vào quốc gia này thì du khách Việt Nam bắt buộc phải có visa. Vậy một bộ hồ sơ xin visa New Zealand đầy đủ cần chuẩn bị những gì? ASM xin chia sẻ với bạn những thông tin cần thiết trong quy trình xin visa du lịch New Zealand được tổng hợp từ nhiều nguồn giúp bạn.
+                                            </p>
+                                            <div class="btn-view-detail">
+                                                <a href="javascript:void(0);" class="view-more">
+                                                    <span class="txt">Tìm hiểu thêm</span>
+                                                    <span class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                                                            <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="#01BFE8"/>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-news-cate custom-dots position-relative" v-for="item in 3">
+                        <div class="box-title">
+                            <h3 class="title">
+                                Cẩm nang
+                            </h3>    
+                            <a href="javascript:void(0);" class="view-more">
+                                <span> Xem tất cả </span>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                                        <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="#01BFE8"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4" v-for="items in 3">
+                                <new-item></new-item>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-news-cate custom-dots position-relative" >
+                        <div class="box-title">
+                            <h3 class="title">
+                                Download biểu mẫu
+                            </h3>    
+                            <a href="javascript:void(0);" class="view-more">
+                                <span> Xem tất cả </span>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                                        <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="#01BFE8"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4" v-for="items in 3">
+                                <div class="item-news-page">
+                                    <a href="" class="picture-news" title="" style="background-image: url(images/article/news1.png)">
+                                    </a>
+                                    <div class="content-item-news-page">
+                                        <h4 class="title-item">
+                                            <a href="" title="">Kinh nghiệm xin visa du lịch Canada tỷ lệ thành công cao</a>
+                                            </h4>
+                                        <p class="txt-content-item">Nếu bạn đang ở Mỹ một cách hợp pháp thì bạn hoàn toàn có thể xin visa Canada từ Mỹ với hộ chiếu của mình. Việc xin visa này không khó nên nhiều người đến Mỹ du lịch đã nhân tiện tiến hành luôn...</p>
+                                        <div class="btn-view-detail">
+                                            <a href="">
+                                                <span class="txt">Xem thêm</span>
+                                                <span class="icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                                                        <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="#01BFE8"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:void(0);" class="download">
+                                                <span class="txt">Tải về</span>
+                                                <span class="icon">
+                                                    <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.46967 14.5303C5.76256 14.8232 6.23743 14.8232 6.53033 14.5303L11.3033 9.75736C11.5962 9.46447 11.5962 8.98959 11.3033 8.6967C11.0104 8.40381 10.5355 8.40381 10.2426 8.6967L6 12.9393L1.75736 8.6967C1.46446 8.4038 0.98959 8.4038 0.696697 8.6967C0.403803 8.98959 0.403803 9.46446 0.696696 9.75736L5.46967 14.5303ZM5.25 0.5L5.25 14L6.75 14L6.75 0.5L5.25 0.5Z" fill="#FEB109"/>
+                                                    </svg>                                                        
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <myfooter></myfooter>
+
+
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/httpvueloader.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/mmenu/mmenu.js"></script>
+    <script src="libs/bootstrap/popper.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- flatpickr js-->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <!-- lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.6/dist/lazyload.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                product: [],
+                loadingProduct: '',
+                post: [],
+                loadingPost: '',
+                swiperFeatured: null,
+                swiperFeaturedOptions: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                    speed: 800,
+                    autoHeight: true,
+                    lazy: {
+                        loadPrevNext: true,
+                    }
+                },
+            },
+            components: {
+                myheader: httpVueLoader("vue_components/header.vue"),
+                breadcrumb: httpVueLoader("vue_components/breadcrumb.vue"),
+                myfooter: httpVueLoader("vue_components/footer.vue"),
+                'product-item': httpVueLoader("vue_components/productItem.vue"),
+                'new-item': httpVueLoader("vue_components/new-item.vue"),
+                dichvuitem: httpVueLoader("vue_components/dichvuitem.vue")
+            },
+            methods: {
+                getDataProduct: function() {
+                    fetch(`json/product.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.product = result;
+                            this.loadingProduct = true;
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                },
+                getDataPost: function() {
+                    fetch(`json/post.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.post = result;
+                            this.loadingPost = true;
+
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                }
+            },
+            mounted() {
+
+
+                this.$nextTick(() => {
+                    $(window).bind("load", function() {
+                        var lazyLoadInstance = new LazyLoad({
+                            elements_selector: ".lazy"
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

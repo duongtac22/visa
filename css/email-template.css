@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    background: #F1F1F1;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-md-6 {
+    flex : 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+}
+.template_email {
+  max-width: 616px;
+  margin: 37px auto 74px;
+}
+
+.template_email .temp-head {
+  background: #3797A4;
+  border-radius: 8px 8px 0px 0px;
+  padding: 16px;
+  text-align: center;
+}
+
+.template_email .temp-content {
+  background: #ffffff;
+  padding: 20px 15px;
+  color: #222222;
+}
+
+.template_email .temp-content h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.template_email .temp-content h3 + p {
+  font-size: 12px;
+  color: #000000;
+}
+
+.template_email .temp-content .info-bill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3797A4;
+}
+
+.template_email .temp-content .row h4 {
+  font-weight: 500;
+  font-size: 14px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.template_email .temp-content .row p {
+  font-size: 13px;
+  color: #222222;
+}
+
+.template_email .temp-content .detail-bill h3 {
+  font-weight: bold;
+  font-size: 13px;
+  color: #3797A4;
+  text-transform: capitalize;
+  margin-bottom: 7px;
+}
+
+.template_email .temp-content .detail-bill .table {
+  font-size: 12px;
+  line-height: 19px;
+  color: #515151;
+}
+
+.template_email .temp-content .detail-bill .table tr,
+.template_email .temp-content .detail-bill .table td,
+.template_email .temp-content .detail-bill .table th,
+.template_email .temp-content .detail-bill .table thead {
+  border: 0;
+}
+
+.template_email .temp-content .detail-bill .table thead {
+  background: #3797A4;
+  border-radius: 4px 4px 0px 0px;
+  color: #ffffff;
+}
+
+.template_email .temp-content .detail-bill .table tbody tr:nth-of-type(odd) {
+  background: #F1F1F1;
+}
+
+.template_email .temp-content .detail-bill .table tbody tr:nth-of-type(even) {
+  background: #F9F7F7;
+}
+
+.template_email .temp-content button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #3797A4;
+  border-radius: 4px;
+  height: 40px;
+  padding: 0 15px;
+  margin: 16px 0px 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.template_email .temp-content .tks {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+@media (max-width: 991px) {
+  .template_email {
+    margin-bottom: 30px;
+  }
+}

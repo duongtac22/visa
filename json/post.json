@@ -1,0 +1,50 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Đồng hồ - Vật bất ly thân của phụ nữ thời hiện đại",
+        "body": "Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...",
+        "imageUrl": "images/post/article1.png",
+        "created": "28-9-2020"
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Cách phân biệt đồng hồ chính hãng và đồng hồ Fake",
+        "body": "Thị trường đồng hồ ngày một phát triển, và những chiếc đồng hồ fake xuất hiện ngày càng nhiều...",
+        "imageUrl": "images/post/article2.png",
+        "created": "8-10-2020"
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "Pin đồng hồ Citizen Eco-Drive có thay được không?",
+        "body": "Đồng hồ Citizen Eco-Drive là dòng đồng hồ đeo tay hoạt động dựa trên nguồn năng lượng ánh sáng...",
+        "imageUrl": "images/post/article3.png",
+        "created": "1-8-2020"
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "Đồng hồ - Vật bất ly thân của phụ nữ thời hiện đại Copy",
+        "body": "Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...",
+        "imageUrl": "images/post/article1.png",
+        "created": "28-9-2020"
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "Cách phân biệt đồng hồ chính hãng và đồng hồ Fake Copy",
+        "body": "Thị trường đồng hồ ngày một phát triển, và những chiếc đồng hồ fake xuất hiện ngày càng nhiều...",
+        "imageUrl": "images/post/article2.png",
+        "created": "8-10-2020"
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "Pin đồng hồ Citizen Eco-Drive có thay được không? Copy",
+        "body": "Đồng hồ Citizen Eco-Drive là dòng đồng hồ đeo tay hoạt động dựa trên nguồn năng lượng ánh sáng...",
+        "imageUrl": "images/post/article3.png",
+        "created": "1-8-2020"
+    }
+]

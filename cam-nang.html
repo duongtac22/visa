@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/aos/aos.css">
+    <link rel="stylesheet" href="libs/mmenu/mmenu.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+    <div id="app">
+        <myheader></myheader>
+
+        <main class="main-content">
+            <breadcrumb></breadcrumb>
+            <!-- visa list page-->
+            <div class="wp-news-page">
+                <div class="container">
+                    <h2 class="title-news-page">Dịch vụ Visa cho người Việt Nam</h2>
+
+                    <div class="list-news-page">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4" v-for="items in 6">
+                                <new-item></new-item>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <ul class="pagination" role="navigation">
+        
+                            <li class="page-item disabled" aria-disabled="true" aria-label="« Trước">
+                        <span class="page-link" aria-hidden="true">‹</span>
+                    </li>
+                
+                
+                            
+                    
+                    
+                                                                                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=2">2</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=3">3</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=4">4</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=5">5</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=6">6</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=7">7</a></li>
+                                                                
+                
+                            <li class="page-item">
+                        <a class="page-link" href="http://asmvisa.todo.vn/dich-vu-visa-cho-nguoi-nuoc-ngoai-p0.html?page=2" rel="next" aria-label="Sau »">›</a>
+                    </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <myfooter></myfooter>
+
+
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/httpvueloader.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/mmenu/mmenu.js"></script>
+    <script src="libs/bootstrap/popper.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- flatpickr js-->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                product: [],
+                loadingProduct: '',
+                post: [],
+                loadingPost: '',
+                swiperFeatured: null,
+                swiperFeaturedOptions: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                    speed: 800,
+                    autoHeight: true,
+                    lazy: {
+                        loadPrevNext: true,
+                    }
+                },
+            },
+            components: {
+                myheader: httpVueLoader("vue_components/header.vue"),
+                breadcrumb: httpVueLoader("vue_components/breadcrumb.vue"),
+                myfooter: httpVueLoader("vue_components/footer.vue"),
+                'product-item': httpVueLoader("vue_components/productItem.vue"),
+                'new-item': httpVueLoader("vue_components/new-item.vue"),
+                dichvuitem: httpVueLoader("vue_components/dichvuitem.vue")
+            },
+            methods: {
+                getDataProduct: function() {
+                    fetch(`json/product.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.product = result;
+                            this.loadingProduct = true;
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                },
+                getDataPost: function() {
+                    fetch(`json/post.json`)
+                        .then(result => result.json())
+                        .then(result => {
+                            console.log(result);
+                            this.post = result;
+                            this.loadingPost = true;
+
+                        })
+                        .catch(
+                            function(error) {
+                                console.log('Error: \n', error);
+                            }
+                        );
+                }
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+.wp-breadcrumb-page {
+    padding: 27px 0;
+    .list-page-breadcrumb {
+        ul {
+            padding: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                position: relative;
+                margin-left: 30px;
+                a {
+                    color: #848383;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition: all .3s;
+                }
+                &.active {
+                    &:before {
+                        background: #01BFE8;
+                    }
+                    &:after {
+                        background: #01BFE8;
+                    }
+                    a {
+                        color: #01BFE8;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 8px;
+                    background: #848383;
+                    left: -15px;
+                    transform: rotate(-45deg);
+                    top: 8px;
+                    transition: all .3s;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 8px;
+                    background: #848383;
+                    left: -15px;
+                    bottom: 6px;
+                    transform: rotate(45deg);
+                    transition: all .3s;
+                }
+                &:hover {
+                    a {
+                        color: #01BFE8 !important;
+                    }
+                    &:before {
+                        background: #01BFE8;
+                    }
+                    &:after {
+                        background: #01BFE8;
+                    }
+                }
+                &:first-child {
+                    margin-left: 0;
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .wp-breadcrumb-page {
+        padding: 15px 0;
+    }
+}

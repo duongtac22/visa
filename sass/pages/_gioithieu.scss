@@ -1,0 +1,70 @@
+.aboutus-page {
+    .aboutus-content{
+        padding: 40px 0 ;
+        background : #fff ;
+        h3.title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 36px;
+            color : $color-bg ;
+           
+        }
+        @media (max-width: 991px) {
+            padding: 20px 0 ; 
+            h3.title {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.block-banner-full {
+    background: url('../images/banner-gioithieu.png') center center no-repeat;
+    background-size: cover;
+    text-align: left;
+    padding: 75px 0;
+    position : relative; 
+    &:after {
+        content : '' ;
+        position : absolute;
+        z-index: 4;
+        top: 0 ;
+        left: 0 ;
+        right: 0 ;
+        bottom: 0 ;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .box-title {
+        position : relative ; 
+        z-index: 5;
+        h2.title {
+            font-weight: bold;
+            font-size: 55px;
+            line-height: 81px;
+            color : #fff; 
+        }
+        p.desc {
+            font-size: 35px;
+            line-height: 48px;
+            color : $color-text; 
+        }
+    }
+    @media (max-width: 991px) {
+        padding: 45px 0;
+        .box-title {
+            h2.title {
+                font-size: 36px;
+                line-height: 53px;
+            }
+            p.desc {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'iCiel-Rukola';
+  src:url('../fonts/iCielRukola/iCiel-Rukola.ttf.woff') format('woff'),
+      url('../fonts/iCielRukola/iCiel-Rukola.ttf.svg#iCiel-Rukola') format('svg'),
+      url('../fonts/iCielRukola/iCiel-Rukola.ttf.eot'),
+      url('../fonts/iCielRukola/iCiel-Rukola.ttf.eot?#iefix') format('embedded-opentype'); 
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Bold.woff2') format('woff2'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Bold.woff') format('woff'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Bold'), local('SFProDisplay-Medium'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Medium.woff2') format('woff2'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Medium.woff') format('woff'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Regular.woff2') format('woff2'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Regular.woff') format('woff'),
+      url('../fonts/SF-Pro-Display/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
